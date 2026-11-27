@@ -32,3 +32,19 @@ python -m venv venv
 
 pip install -r requirements.txt
 uvicorn main:app --reload
+```
+
+Open interactive Swagger UI at `http://127.0.0.1:8000/docs`.
+
+## Run Tests
+
+```bash
+pytest -v
+```
+
+## Run with Docker
+
+```bash
+docker build -t trackflow-api .
+docker run -p 8000:8000 trackflow-api
+```
